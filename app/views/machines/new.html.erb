@@ -7,11 +7,16 @@
     </p>
     <p>
       <%= f.label :name %><br />
-      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.text_field :name, class: 'form-control', :placeholder=> "Name" %>
+    </p>
+    <p>
+      <%= f.label "Reference" %><br />
+      <%= f.text_field :url, class: 'form-control', :placeholder=> "URL" %>
     </p>
      <p>
       <%= f.label :description %><br />
-      <%= f.text_field :description,class: 'form-control' %>
+      <%#= f.text_area :description,class: 'form-control' %>
+      <%= f.text_area(:description, size: '43x10') %>
     </p>
     <p>
       <%= f.file_field :image %>

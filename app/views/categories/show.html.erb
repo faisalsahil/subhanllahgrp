@@ -4,7 +4,11 @@
         <h2><b>Categories</b></h2>
         <ul class="filter-list checkbox">
          <% @categories.each do |category|%>
-            <li><%= link_to "#{category.name}", category_path(category.id)%></li>
+            <li><%= link_to "#{category.name}", category_path(category.id)%>
+              <% if user_signed_in? %>
+                <%= link_to "edit", edit_category_path(category.id)%>
+              <% end %>
+            </li>
          <% end %> 
         </ul>
          
@@ -21,6 +25,10 @@
                     </div>
                     <strong><%= machine.name%></strong>
                     <%= link_to "see more", machine_path(machine.id), class: "btn btn-primary pull-right"%>
+                    <% if user_signed_in? %>
+                    <br/>
+                    <%= link_to "edit", edit_machine_path(machine.id)%>
+                    <% end %>
                 </div>
               </div>
             <% end %>  

@@ -20,13 +20,17 @@
         <h2><b>Categories</b></h2>
         <ul class="filter-list checkbox">
          <% @categories.each do |category|%>
-            <li><%= link_to "#{category.name}", category_path(category.id)%></li>
+            <li><%= link_to "#{category.name}", category_path(category.id)%>
+                 <% if user_signed_in? %>
+                <%= link_to "edit", edit_category_path(category.id)%>
+              <% end %>  
+            </li>
          <% end %> 
         </ul>
       </aside>
       <div id="content" class="col-md-9 col-sm-9 col-xs-12">
         <div style="margin-left: 26%;margin-top: 5%;">
-          <h1 style="margin-top: 5px;text-shadow: none;font-weight: 900 !important;font-family: -webkit-body;font-size: -webkit-xxx-large;"><i>Al-GAHTANI MODERN</i><br /><i style="font-weight: normal;font-size: smaller;font-family: monospace;margin-left: 96px;">MACHINERY STORE</i></h1>
+          <h1 style="margin-top: 5px;text-shadow: none;font-weight: 900 !important;font-family: -webkit-body;font-size: -webkit-xxx-large;"><i>Al-GAHTANI MODERN</i><br /><i style="font-weight: normal;font-size: smaller;font-family: monospace;margin-left: 96px;background-color: lightgreen;">MACHINERY STORE</i></h1>
         </div>
         <p style="margin-left: 10%;margin-top: 10%;">We deals all kind of machinery. All kind of Lathe Machine, Drill Machine, Boring Machine, Head Facer, Crank Shaft Grinder, Honing Machine, Power press, Hydraulic Press, Diesel laboratory, and all plastic machinery are available here. We deliver all kind of machinery at order and relative accessories to our clients all over the world.</p>
       </div>

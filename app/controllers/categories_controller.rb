@@ -15,4 +15,15 @@ class CategoriesController < ApplicationController
 		@machines = @category.machines
 		@categories = Category.all
 	end
+
+	def edit
+		@category = Category.find(params[:id])
+	end
+
+	def update
+		@category = Category.find(params[:id])
+		@category.update_attributes(params[:category])
+		flash[:success] = "Successfully updated."
+		redirect_to root_url
+	end
 end
