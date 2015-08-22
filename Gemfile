@@ -35,10 +35,10 @@ gem 'jquery-rails'
 # gem 'sorcery'
 gem 'activerecord'
 gem 'geocoder'
-
+gem 'devise'
 # To use ActiveModel has_secure_password
 gem 'bcrypt'
-
+gem 'carrierwave'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

@@ -1,4 +1,6 @@
 HmzFoods::Application.routes.draw do
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -24,6 +26,12 @@ HmzFoods::Application.routes.draw do
       end
     end
 
+    resources :machines
+    resources :categories
+  
+    resources :categories do
+      resources :machines
+    end
   # Sample resource route with options:
   #   resources :products do
   #     member do

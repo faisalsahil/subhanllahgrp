@@ -14,33 +14,34 @@
 
 <body>
    
- <%#= render "header"%> 
-<!--/header-->
-<!--=== End Header ===-->    
-
-<!--=== Slider ===-->
-
-<!--=== Content Part ===-->
-<div class="container">	
-        <h1 style="margin-left: 35%;margin-top: 20%;">Coming Soon</h1>
-
-</div><!--/container-->		
-<!-- End Content Part -->
+<section id="main">
+  <div class="container">
+      <aside id="sidebar" class="col-md-3 col-sm-3 col-xs-12" style="margin-top:11px;">
+        <h2><b>Categories</b></h2>
+        <ul class="filter-list checkbox">
+         <% @categories.each do |category|%>
+            <li><%= link_to "#{category.name}", category_path(category.id)%></li>
+         <% end %> 
+        </ul>
+      </aside>
+      <div id="content" class="col-md-9 col-sm-9 col-xs-12">
+        <div style="margin-left: 26%;margin-top: 5%;">
+          <h1 style="margin-top: 5px;text-shadow: none;font-weight: 900 !important;font-family: -webkit-body;font-size: -webkit-xxx-large;"><i>Al-GAHTANI MODERN</i><br /><i style="font-weight: normal;font-size: smaller;font-family: monospace;margin-left: 96px;">MACHINERY STORE</i></h1>
+        </div>
+        <p style="margin-left: 10%;margin-top: 10%;">We deals all kind of machinery. All kind of Lathe Machine, Drill Machine, Boring Machine, Head Facer, Crank Shaft Grinder, Honing Machine, Power press, Hydraulic Press, Diesel laboratory, and all plastic machinery are available here. We deliver all kind of machinery at order and relative accessories to our clients all over the world.</p>
+      </div>
+  </div>
+</section>
 
 <%#= render "footer"%>
 
 <!-- JS Global Compulsory -->			
 <script type="text/javascript" src="assets/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="assets/hover-dropdown.min.js"></script> 
-<script type="text/javascript" src="assets/back-to-top.js"></script>
 <!-- JS Implementing Plugins -->           
-<script type="text/javascript" src="assets/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="assets/bxslider/jquery.bxslider.js"></script>
-<script type="text/javascript" src="assets/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <!-- JS Page Level -->           
 <script type="text/javascript" src="assets/app.js"></script>
+<script type="text/javascript" src="assets/owl.carousel.js"></script>
 <script type="text/javascript" src="assets/pages/index.js"></script>
 
 

@@ -1,0 +1,31 @@
+<section id="main">
+  <div class="container">
+      <aside id="sidebar" class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 11px;">
+        <h2><b>Categories</b></h2>
+        <ul class="filter-list checkbox">
+         <% @categories.each do |category|%>
+            <li><%= link_to "#{category.name}", category_path(category.id)%></li>
+         <% end %> 
+        </ul>
+         
+      </aside>
+      <div id="content" class="col-md-9 col-sm-9 col-xs-12" >
+        <div class="productsarea">
+          <div class="row">
+            <% @machines.each do |machine|%>
+              <div class="col-md-4">
+                <div class="product">
+                    <div>
+                      <%= image_tag machine.image_url.to_s, class: "img-responsive", alt: "image description", style: "width:200px;height: 200px;" %>
+                      <br/>
+                    </div>
+                    <strong><%= machine.name%></strong>
+                    <%= link_to "see more", machine_path(machine.id), class: "btn btn-primary pull-right"%>
+                </div>
+              </div>
+            <% end %>  
+          </div>
+        </div>
+      </div>
+  </div>
+</section>

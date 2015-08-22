@@ -630,7 +630,7 @@ a.list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:#428bca;backgr
 a.thumbnail:hover,a.thumbnail:focus{border-color:#428bca;}
 .thumbnail>img{margin-left:auto;margin-right:auto;}
 .thumbnail .caption{padding:9px;color:#333333;}
-.alert{padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;}.alert h4{margin-top:0;color:inherit;}
+.alert{padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;background-color: lightgreen;}.alert h4{margin-top:0;color:inherit;}
 .alert .alert-link{font-weight:bold;}
 .alert>p,.alert>ul{margin-bottom:0;}
 .alert>p+p{margin-top:5px;}

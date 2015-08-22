@@ -1,0 +1,21 @@
+<div class="well" style="width: 36%;margin-top: 2%;margin-left: 29%;">
+  <%= form_for @machine, :html => {:multipart => true} do |f| %>
+    <%#= f.error_messages %>
+     <p>
+      <%= f.label :category %><br />
+      <%= f.collection_select(:category_id, Category.all, :id, :name, :prompt => 'Select',class: 'form-control') %>
+    </p>
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name, class: 'form-control' %>
+    </p>
+     <p>
+      <%= f.label :description %><br />
+      <%= f.text_field :description,class: 'form-control' %>
+    </p>
+    <p>
+      <%= f.file_field :image %>
+    </p>
+    <p><%= f.submit class: 'btn btn-primary'%></p>
+  <% end %>
+</div>
