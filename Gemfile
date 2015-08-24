@@ -41,7 +41,7 @@ gem 'bcrypt'
 gem 'carrierwave'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
+gem 'carrierwave-dropbox'
 # Use unicorn as the app server
 # gem 'unicorn'
 

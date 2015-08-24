@@ -1,16 +1,7 @@
-<section id="main">
-  <div class="container">
-    <aside id="sidebar" class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 11px;">
-      <h2><b>Categories</b></h2>
-      <ul class="filter-list checkbox">
-       <% @categories.each do |category|%>
-          <li><%= link_to "#{category.name}", category_path(category.id)%></li>
-       <% end %> 
-      </ul>
-    </aside>
+
     <div id="content" class="col-md-9 col-sm-9 col-xs-12" >
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <h4><strong><%= @machine.name%></strong></h4>
           <!-- <p><%#= @machine.description%></p> -->
           <strong><a href='<%= "#{@machine.url}" %>' target="_blank">more details</a></strong>
@@ -18,13 +9,11 @@
           <br/><%= link_to "back", category_path(@machine.category.id), class: "btn btn-primary"%>
         </div>
         <div class="col-md-8 pull-right">  
-          <%= image_tag @machine.image_url.to_s, class: "", alt: "image description", style: "width:500px;height: 500px;" %>
+          <%= image_tag @machine.image_url.to_s, class: "img-responsive", alt: "image description" %>
         </div>
       </div>
-      <div>
+      <div class="col-md-12">
         <h3>Product Specification</h3>
         <p><%= @machine.description%></p>
       </div>
     </div>
-  </div>
-</section>

@@ -4,10 +4,28 @@
 		<%= msg%>
 	</div>
 <% end %>
-<div class="content">
-	<div class="row-fluid">
-		<div class="span12">
-			<%= yield %>
-		</div>
+<section id="main">
+	<div class="container">	
+		<aside id="sidebar" class="col-md-3 col-sm-3 col-xs-12" style="margin-top:11px;">
+		     <a id="logo" href="index.html">
+		        <img src="/assets/logo.png"  class="img-responsive" alt="Caprice" />
+		    </a>
+	    	<!-- Begin Menu -->
+		      <div id="menu" class="menu-v">
+		        <ul>
+		         <% @categories.each do |category|%>
+		            <li><%= link_to "#{category.name}", category_path(category.id)%>
+		                 <% if user_signed_in? %>
+		                <%= link_to "edit", edit_category_path(category.id)%>
+		              <% end %>  
+		            </li>
+		         <% end %> 
+		        </ul>
+		      </div>
+		    <!-- End Menu -->
+	    </aside>
+	   <!-- End Sidebar -->
+
+		<%= yield %>
 	</div>
-</div>
+</section>
