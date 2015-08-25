@@ -39,9 +39,9 @@ gem 'devise'
 # To use ActiveModel has_secure_password
 gem 'bcrypt'
 gem 'carrierwave'
+gem 'carrierwave-dropbox'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-gem 'carrierwave-dropbox'
 # Use unicorn as the app server
 # gem 'unicorn'
 
