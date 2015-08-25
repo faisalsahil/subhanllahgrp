@@ -1,17 +1,19 @@
-<div class="row"> 
-  <% @machines.each do |machine|%>       
-    <div class="col-sm-4 col-lg-4 col-md-4" style="margin-bottom: 12px;">
-      <div class="thumbnail">
-          <%= image_tag machine.image_url.to_s, style: "width: 320px; height: 150px;", class: "img-responsive", alt: "image description" %>
-          <div class="caption" style="height: auto;">  
-             <%= link_to "see more", machine_path(machine.id), class: "btn btn-primary pull-right"%>
-              <h4><strong><%= machine.name%></strong></h4>
-            <% if user_signed_in? %>
-          <%= link_to "edit", edit_machine_path(machine.id)%>
-          <% end %>
-          </div>
-          
+<div id="content" class="col-md-9 col-sm-9 col-xs-12">
+  <div class="row"> 
+    <% @machines.each do |machine|%>       
+      <div class="col-sm-4 col-lg-4 col-md-4 col-sm-height" style="margin-bottom: 5px;     min-height: 400px; ">
+        <div class="thumbnail">
+            <%= image_tag machine.image_url.to_s, class: "img-responsive", alt: "image description" %>
+            <div class="caption" style="height: auto;">  
+               <%= link_to "see more", machine_path(machine.id), class: "btn btn-primary pull-right"%>
+                <h4><strong><%= machine.name%></strong></h4>
+              <% if user_signed_in? %>
+            <%= link_to "edit", edit_machine_path(machine.id)%>
+            <% end %>
+            </div>
+            
+        </div>
       </div>
-    </div>
-  <% end %>  
+    <% end %>  
+  </div>
 </div>

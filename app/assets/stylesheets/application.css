@@ -389,10 +389,6 @@
     overflow: hidden;
 }
 
-.caption h4 {
-    white-space: nowrap;
-}
-
 .thumbnail img {
     width: 100%;
 }
@@ -497,7 +493,9 @@
 	border: none;
 }
 #content .thumbnail img{
-	height: 150px;
+	height: 250px;
+	width: 320px;
+	margin-bottom: 12px;
 }
 #header .navbar {
 	margin-bottom: 0;
